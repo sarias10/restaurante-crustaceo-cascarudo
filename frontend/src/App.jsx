@@ -6,6 +6,7 @@ import Message from './components/Message'
 import Togglable from './components/Togglable'
 import BlogForm from './components/BlogForm'
 import { compareFn } from './utils'
+
 import Welcome from './components/Welcome'
 
 const App = () => {
