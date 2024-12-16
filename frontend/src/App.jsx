@@ -6,6 +6,7 @@ import Message from './components/Message'
 import Togglable from './components/Togglable'
 import BlogForm from './components/BlogForm'
 import { compareFn } from './utils'
+import Welcome from './components/Welcome'
 
 const App = () => {
   const [username, setUsername] = useState('')
@@ -137,7 +138,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>blogs</h2>
+      <Welcome/>
       {message &&
       <Message message={message.message} error ={message.error}/>}
       {user ?
