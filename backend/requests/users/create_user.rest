@@ -1,0 +1,64 @@
+### create user Julio
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Julio",
+    "name": "Julio",
+    "password": "root"
+}
+
+### Create user Kelly
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "kelly",
+    "name": "kelly",
+    "password": "root"
+}
+
+### Create user Sergio
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "sergio",
+    "name": "sergio",
+    "password": "root"
+}
+
+### user not valid
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "cd",
+    "name": "kelly",
+    "password": "root"
+}
+
+### password not valid
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "camilo",
+    "name": "camilo",
+    "password": "ds"
+}
+
+### password's missing
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "camilo",
+    "name": "camilo",
+    "password": ""
+}
