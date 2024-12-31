@@ -1,19 +1,29 @@
-name: Deploy Lambda Function
+name: Deploy to AWS Lambda
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Install zip tool
-        uses: montudor/action-zip@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Create Zip file for Lambda function
-        run: zip -r code.zip .
+        run: zip -r code.zip . -x ".git/*"
+
       - name: AWS CLI v2
         uses: imehedi/actions-awscli-v2@latest
         with:
