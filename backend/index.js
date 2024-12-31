@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const local = process.env.LOCAL === 'true'
 
-app.get('/', (req, res) => {
+app.get('/hola_mundo', (req, res) => {
   res.send('Hello from github actions!');
 });
 
