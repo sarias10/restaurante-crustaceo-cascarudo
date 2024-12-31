@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const local = process.env.LOCAL === 'true'
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello from github actions!');
 });
 
 export const handler = serverless(app);
