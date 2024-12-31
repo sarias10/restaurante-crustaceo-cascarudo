@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
   res.send('Hello from github actions!');
 });
 
+app.get('/other', (req, res) => {
+  res.send('other route');
+});
+
 export const handler = serverless(app);
 
 if(local) {
